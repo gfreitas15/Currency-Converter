@@ -5,11 +5,8 @@
 O **Currency Converter** é um sistema de conversão de moedas desenvolvido em Java com interface gráfica Swing. O projeto permite aos usuários converter valores entre diferentes moedas utilizando taxas de câmbio em tempo real fornecidas pela [ExchangeRate-API](https://www.exchangerate-api.com).
 
 ### Objetivo
+
 > Demonstrar na prática técnicas de qualidade e teste de software, aplicando estratégias de teste, automação, métricas, estimativas e revisão de código em um sistema real.
-
-### Escopo
-
-- Fazer
 
 ## 👥 Equipe
 
@@ -19,11 +16,44 @@ O **Currency Converter** é um sistema de conversão de moedas desenvolvido em J
 - **Rafael Silveira de Vargas** - RA: 1292312390
 - **Victor Pieluhowski Zuboski Bastos** - RA: 1292317745
 
-## 🧪 Testes
+## 🧪 Plano de Testes
 
-### Plano de Testes
+### Escopo
 
-- Fazer
+#### Inclusões
+
+- Testes funcionais da UI
+- Testes de conexão da API
+- Testes de validação das taxas de conversão
+- Testes de entradas inválidas
+
+#### Exclusões
+
+- Testes de segurança
+- Testes de desempenho
+- Testes de carga/estresse
+
+#### Risco e Mitigações
+
+
+### Critérios
+
+#### Aceitação
+
+- Comunicação com API funcionando
+- Funcionalidade da UI sem erros críticos
+- Validação correta da entrada de dados
+- Resultado da conversão não apresenta erros
+
+#### Saída
+
+- Nenhum defeito crítico pendente
+- Todos os casos de teste foram executados
+
+### Casos de Teste
+
+
+
 
 ## 🤖 Testes Automatizados
 
@@ -68,7 +98,7 @@ Utilizamos uma estratégia baseada em **Git Flow** simplificado:
 
 ## 🚀 Execução
 
-- Fazer
+- Fazer DPS
 
 ## 🌐 GitHub Pages
 
