@@ -97,20 +97,25 @@ O **Currency Converter** é um sistema de conversão de moedas desenvolvido em J
 
 ## 🔧 Versionamento
 
-- Fazer
+### Estrutura das Pastas
 
 ### Estratégia de Branches
 
-- Fazer
-
-Utilizamos uma estratégia baseada em **Git Flow** simplificado:
+Utilizamos uma estratégia baseada em **Git Flow** simplificado, como não desenvolvemos nenhuma funcionalidade, utilizamos `test` ao invés de `feature`
 
 - **`main`**: Código estável e produção
 - **`develop`**: Desenvolvimento e integração
-- **`feature/*`**: Novas funcionalidades
-  - Exemplo: `feature/testes-automatizados`
 - **`test/*`**: Desenvolvimento de testes
-  - Exemplo: `test/api-tests`
+
+Adotamos a especificação **Conventional Commits** para padronizar as mensagens. 
+> A estrutura básica é `tipo(escopo): descrição`.
+> Exemplo: docs: adiciona links de pr e commit
+
+Não utilizamos escopo por ser um projeto simples.
+
+>**[Link PR'S](https://github.com/gfreitas15/Currency-Converter/pulls)**
+
+>**[Link para Commits](https://github.com/gfreitas15/Currency-Converter/commits/main)**
 
 ## 🚀 Execução
 
