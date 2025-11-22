@@ -52,6 +52,22 @@ O **Currency Converter** é um sistema de conversão de moedas desenvolvido em J
 
 ### Casos de Teste
 
+| ID    | Caso de Teste                          | Tipo      | Pré-Condição                | Passos                                   | Resultado Esperado                                  | Status    |
+| ----- | -------------------------------------- | --------- | --------------------------- | ---------------------------------------- | --------------------------------------------------- | --------- |
+| CT-01 | Carregar aplicação                     | UI        | App iniciado                | Abrir a aplicação                        | A janela principal deve abrir sem erros             | A definir |
+| CT-02 | Selecionar moeda de origem             | UI        | App aberto                  | Abrir dropdown e escolher moeda          | Moeda de origem deve ser atualizada corretamente    | A definir |
+| CT-03 | Selecionar moeda de destino            | UI        | App aberto                  | Abrir dropdown e escolher moeda          | Moeda de destino deve ser atualizada corretamente   | A definir |
+| CT-04 | Inserir valor válido para conversão    | UI        | App aberto                  | Digitar valor no campo                   | Campo deve aceitar o valor sem erros                | A definir |
+| CT-05 | Inserir valor inválido (texto)         | UI        | App aberto                  | Digitar texto no campo                   | Exibir mensagem de erro ou impedir entrada inválida | A definir |
+| CT-06 | Inserir valor negativo                 | UI        | App aberto                  | Digitar valor                            | App deve rejeitar ou alertar entrada negativa       | A definir |
+| CT-07 | Converter valores com API respondendo  | API/UI    | Internet ativa              | Preencher campos e clicar em “Converter” | Valor convertido correto com taxa real              | A definir |
+| CT-08 | Converter valores com API fora do ar   | API       | API offline                 | Clicar em “Converter”                    | App deve exibir erro informativo (“Falha na API”)   | A definir |
+| CT-09 | Validar taxa retornada pela API        | API       | API online                  | Realizar requisição                      | Taxa deve ser coerente com o endpoint oficial       | A definir |
+| CT-10 | Conversão com mesma moeda (USD→USD)    | Funcional | App aberto                  | Tentar converter                         | Resultado deve ser exatamente o mesmo valor         | A definir |
+| CT-11 | Botão converter desabilitado sem dados | UI        | App aberto                  | Não preencher nada                       | Botão deve permanecer desativado                    | A definir |
+| CT-12 | UI não deve travar durante conversão   | UI        | API online                  | Executar conversão                       | Aplicação continua responsiva                       | A definir |
+| CT-13 | Limpar campos                          | UI        | Campo preenchido            | Botão Limpar                             | Campos devem retornar ao estado inicial             | A definir |
+| CT-14 | Atualização de valor resultante        | UI        | Campos preenchidos          | Modificar input                          | Resultado deve atualizar após nova conversão        | A definir |
 
 
 
