@@ -75,11 +75,32 @@ O **Currency Converter** é um sistema de conversão de moedas desenvolvido em J
 
 ### Ferramentas Utilizadas
 
-- Fazer
+- **JUnit 5** (Versão 5.10.0)
 
 ### Como Rodar os Testes
 
-- Fazer
+#### Pré-requisitos
+
+- **Maven** (3.6+)
+- **JDK 23+**
+
+#### Como executar
+
+1. Abrir terminal
+
+2. Abrir o projeto
+
+        cd Currency-Converter
+        
+3. Executar os testes
+
+        mvn test
+
+Gerar relátorio de cobertura com JaCoCo:
+
+    mvn clean test jacoco:report
+    
+    start target/site/jacoco/index.html
 
 ## 📊 Métricas e Estimativas
 
@@ -107,10 +128,7 @@ Utilizamos uma estratégia baseada em **Git Flow** simplificado:
 
 - **`main`**: Código estável e produção
 - **`develop`**: Desenvolvimento e integração
-- **`feature/*`**: Novas funcionalidades
-  - Exemplo: `feature/testes-automatizados`
 - **`test/*`**: Desenvolvimento de testes
-  - Exemplo: `test/api-tests`
 
 ## 🚀 Execução
 
