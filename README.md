@@ -101,7 +101,22 @@ Gerar relátorio de cobertura com JaCoCo:
 
 ## 📊 Métricas e Estimativas
 
-- Fazer
+### Estimativa de Esforço (PERT)
+
+| Atividade                                   | O  | M  | P  | Tempo Estimado (h) | Real (h) |
+|---------------------------------------------|----|----|----|---------------------|----------|
+| Estudo da Aplicação                          | 1  | 2  | 4  | 2.3                 |          |
+| Análise Inicial                               | 1  | 2  | 3  | 2.0                 |          |
+| Definição de Escopo                           | 1  | 1  | 2  | 1.2                 |          |
+| Estudo do Código                              | 1  | 2  | 3  | 2.0                 |          |
+| Planejamento dos Testes (inclui Casos)        | 2  | 3  | 5  | 3.2                 |          |
+| Implementação de Testes Automatizados         | 2  | 4  | 6  | 4.0                 |          |
+| Execução e Validação dos Casos de Teste       | 1  | 2  | 3  | 2.0                 |          |
+| Análise de Qualidade                           | 1  | 2  | 3  | 2.0                 |          |
+| Análise de Cobertura                           | 1  | 1  | 2  | 1.2                 |          |
+| Documentação Final                             | 1  | 2  | 3  | 2.0                 |          |
+| Versionamento e Organização do Repositório     | 1  | 1  | 2  | 1.2                 |          |
+| **Total do Projeto**                           |    |    |    | **23.1**            | **—**    |
 
 ## 🔍 Revisão Técnica
 
