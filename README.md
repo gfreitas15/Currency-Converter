@@ -33,9 +33,6 @@ O **Currency Converter** é um sistema de conversão de moedas desenvolvido em J
 - Testes de desempenho
 - Testes de carga/estresse
 
-#### Risco e Mitigações
-
-
 ### Critérios
 
 #### Aceitação
@@ -83,15 +80,24 @@ O **Currency Converter** é um sistema de conversão de moedas desenvolvido em J
 
 #### Como executar
 
-1. Abrir terminal
+1. **Abrir o terminal**
 
-2. Abrir o projeto
+2. **Acessar o projeto**
+   ```bash
+   cd Currency-Converter
+   ```
 
-        cd Currency-Converter
+3. **Adicionar sua `API_KEY`**  
 
-3. Executar os testes
+   Edite o arquivo:
+   ```
+   src/main/resources/config.properties
+   ```
 
-        mvn test
+4. **Executar os testes**
+   ```bash
+   mvn test
+   ```
 
 
 ## 📊 Métricas e Estimativas
@@ -99,12 +105,12 @@ O **Currency Converter** é um sistema de conversão de moedas desenvolvido em J
 ### Métricas
 
 #### Cobertura de Instruções
+
 No projeto, atingimos 71%, o que demonstra boa cobertura geral.
 
 #### Complexidade Ciclomática
+
 Somando todos as classes, o total observado foi de 50, valor baixo que se justifica pela simplicidade do projeto.
-
-
 
 Como gerar relátorio de cobertura com JaCoCo:
 
@@ -116,18 +122,18 @@ Como gerar relátorio de cobertura com JaCoCo:
 
 | Atividade                                   | O  | M  | P  | Tempo Estimado (h) | Real (h) |
 |---------------------------------------------|----|----|----|---------------------|----------|
-| Estudo da Aplicação                          | 1  | 2  | 4  | 2.3                 |          |
-| Análise Inicial                               | 1  | 2  | 3  | 2.0                 |          |
-| Definição de Escopo                           | 1  | 1  | 2  | 1.2                 |          |
-| Estudo do Código                              | 1  | 2  | 3  | 2.0                 |          |
-| Planejamento dos Testes (inclui Casos)        | 2  | 3  | 5  | 3.2                 |          |
-| Implementação de Testes Automatizados         | 2  | 4  | 6  | 4.0                 |          |
-| Execução e Validação dos Casos de Teste       | 1  | 2  | 3  | 2.0                 |          |
-| Análise de Qualidade                           | 1  | 2  | 3  | 2.0                 |          |
-| Análise de Cobertura                           | 1  | 1  | 2  | 1.2                 |          |
-| Documentação Final                             | 1  | 2  | 3  | 2.0                 |          |
-| Versionamento e Organização do Repositório     | 1  | 1  | 2  | 1.2                 |          |
-| **Total do Projeto**                           |    |    |    | **23.1**            | **—**    |
+| Estudo da Aplicação                          | 1  | 2  | 4  | 2.3                 |     4     |
+| Análise Inicial                               | 1  | 2  | 3  | 2.0                 |     3     |
+| Definição de Escopo                           | 1  | 1  | 2  | 1.2                 |     2     |
+| Estudo do Código                              | 1  | 2  | 3  | 2.0                 |     1     |
+| Planejamento dos Testes (inclui Casos)        | 2  | 3  | 5  | 3.2                 |     2     |
+| Implementação de Testes Automatizados         | 2  | 4  | 6  | 4.0                 |     6     |
+| Execução e Validação dos Casos de Teste       | 1  | 2  | 3  | 2.0                 |     1     |
+| Análise de Qualidade                           | 1  | 2  | 3  | 2.0                 |    4      |
+| Análise de Cobertura                           | 1  | 1  | 2  | 1.2                 |    3      |
+| Documentação Final                             | 1  | 2  | 3  | 2.0                 |    8      |
+| Versionamento e Organização do Repositório     | 1  | 1  | 2  | 1.2                 |    3      |
+| **Total do Projeto**                           |    |    |    | **23.1**            | **37**    |
 
 ## 🔍 Revisão Técnica
 
@@ -137,9 +143,30 @@ Como gerar relátorio de cobertura com JaCoCo:
 
 Utilizamos a ferramenta **SonarQube** para análise estática de código, que fornece métricas detalhadas sobre segurança, confiabilidade, manutenibilidade e duplicação de código.
 
+#### Como Usar:
+
+1. Baixe o [SonarQube](https://www.sonarqube.org/downloads/)
+
+2. Execute-o
+
+3. Abra o navegador e acesse:
+
+`http://localhost:9000`
+
+4. Gere um token
+
+5. Rode o seguinte comando no terminal:
+```bash
+mvn clean verify sonar:sonar 
+ -Dsonar.host.url=http://localhost:9000   
+ -Dsonar.token=SEU_TOKEN_AQUI
+```
+6. Acesse o resultado no seu navegador
+
+
 #### Code Review via Pull Requests
 
-Todos os testes e mudanças passam por revisão colaborativa no GitHub através de Pull Requests antes de serem integrados à branch `develop`.
+Todos os testes e mudanças passam por revisão colaborativa no GitHub através de Pull Requests antes de serem integrados à branch `develop` e principalmente à `main`.
 
 #### Análise de Cobertura (JaCoCo)
 
@@ -147,13 +174,51 @@ A ferramenta **JaCoCo** foi utilizada para análise de cobertura de código, ide
 
 ### Resultados Encontrados
 
-- **302 linhas de código** analisadas
+- **354 linhas de código** analisadas
 - **Segurança:** Nenhuma vulnerabilidade detectada, demonstrando boas práticas de segurança
-- **Manutenibilidade:** Código limpo e bem estruturado, com apenas 4 code smells menores
+- **Manutenibilidade:** Código limpo, com apenas 4 code smells menores
 - **Duplicações:** Nenhuma duplicação de código
 - **Confiabilidade:** Identificado 1 bug que requer correção para melhorar a confiabilidade do sistema
 
+Em geral os resultados foram bem positivos, mas há uma grande ressalva: a maior parte da implementação do código foi feita
+na classe de UI, o que demonstra péssima separação de responsabilidades. A lógica de negócio, validações e até chamadas
+de API foram colocadas diretamente na camada de interface gráfica, o que fere princípios básicos de boas práticas, dificulta os testes automatizados, reduz a reutilização do código e torna a aplicação mais frágil a mudanças.
+Em um cenário ideal, a UI deveria apenas exibir dados e captar interações, enquanto toda a lógica deveria estar isolada
+em serviços ou controladores específicos.
+
 ## 🔧 Versionamento
+
+### Estrutura das Pastas
+
+        Currency-Converter/
+        │
+        ├── docs/                    
+        │
+        ├── src/
+        │   ├── main/
+        │   │   ├── java/com/github/blaxk3/
+        │   │   │   ├── api/           # Classes responsáveis por chamadas externas (APIs)
+        │   │   │   │   └── CurrencyRateAPI.java
+        │   │   │   ├── converter/     # Lógica principal de conversão de moedas
+        │   │   │   │   └── CurrencyConverter.java
+        │   │   │   └── ui/            # Implementação da interface gráfica (UI)
+        │   │   │       └── UI.java
+        │   │   └── resources/         # Arquivos de recursos (caso necessário)
+        │   │
+        │   └── test/
+        │       ├── java/com/github/blaxk3/
+        │       │   ├── api/           # Testes relacionados à camada de API
+        │       │   │   └── CurrencyRateAPITest.java
+        │       │   └── ui/            # Testes da interface gráfica e filtros
+        │       │       ├── NumericFilterTest.java
+        │       │       └── UITest.java
+        │
+        ├── target/                    
+        ├── .gitignore
+        ├── LICENSE
+        ├── pom.xml                   
+        └── README.md
+
 
 ### Estratégia de Branches
 
