@@ -93,13 +93,24 @@ O **Currency Converter** é um sistema de conversão de moedas desenvolvido em J
 
         mvn test
 
-Gerar relátorio de cobertura com JaCoCo:
+
+## 📊 Métricas e Estimativas
+
+### Métricas
+
+#### Cobertura de Instruções
+No projeto, atingimos 71%, o que demonstra boa cobertura geral.
+
+#### Complexidade Ciclomática
+Somando todos as classes, o total observado foi de 50, valor baixo que se justifica pela simplicidade do projeto.
+
+
+
+Como gerar relátorio de cobertura com JaCoCo:
 
     mvn clean test jacoco:report
     
     start target/site/jacoco/index.html
-
-## 📊 Métricas e Estimativas
 
 ### Estimativa de Esforço (PERT)
 
@@ -122,15 +133,27 @@ Gerar relátorio de cobertura com JaCoCo:
 
 ### Técnicas Utilizadas
 
-- Fazer
+#### SonarQube
+
+Utilizamos a ferramenta **SonarQube** para análise estática de código, que fornece métricas detalhadas sobre segurança, confiabilidade, manutenibilidade e duplicação de código.
+
+#### Code Review via Pull Requests
+
+Todos os testes e mudanças passam por revisão colaborativa no GitHub através de Pull Requests antes de serem integrados à branch `develop`.
+
+#### Análise de Cobertura (JaCoCo)
+
+A ferramenta **JaCoCo** foi utilizada para análise de cobertura de código, identificando áreas com baixa cobertura e direcionando melhorias nos testes automatizados.
 
 ### Resultados Encontrados
 
-- Fazer
+- **302 linhas de código** analisadas
+- **Segurança:** Nenhuma vulnerabilidade detectada, demonstrando boas práticas de segurança
+- **Manutenibilidade:** Código limpo e bem estruturado, com apenas 4 code smells menores
+- **Duplicações:** Nenhuma duplicação de código
+- **Confiabilidade:** Identificado 1 bug que requer correção para melhorar a confiabilidade do sistema
 
 ## 🔧 Versionamento
-
-### Estrutura das Pastas
 
 ### Estratégia de Branches
 
@@ -150,10 +173,6 @@ Não utilizamos escopo por ser um projeto simples.
 
 >**[Link para Commits](https://github.com/gfreitas15/Currency-Converter/commits/main)**
 
-## 🚀 Execução
-
-- Fazer DPS
-
 ## 🌐 GitHub Pages
 
-**[Link para a landing page do projeto](https://gfreitas15.github.io/A3GQS5N/)**
+**[Link para a landing page do projeto]()**
